@@ -1,0 +1,64 @@
+.container-bar{
+    width: 100%;
+    max-width: 55px;
+    left: 0;
+    top: 25%;
+    z-index: 9;
+  }
+
+  .container-bar a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 17px;
+    position: relative;
+    transition: all 500ms ease;
+    color: #fff;
+    text-align: center;
+  }
+  .container-bar a:hover{
+    background: #1c1c1c;
+  }
+  .container-bar .icon-facebook{
+    background: #3b5998;
+  }
+  .container-bar .icon-youtube{
+    background: #1f6f8b;    
+    border-radius: 0px 5px 0px 0px;
+  }
+
+  .container-bar .icon-pinterest{
+    background: #c8232c;
+    border-radius: 0px 0px 5px 0px;
+  }
+  .container-bar .icon-google{
+    background: #db4a39;
+  }
+  .container-bar .title{
+    position: fixed;
+    background: #1c1c1c;
+    padding: 6px;
+    border-radius: 3px;
+    font-size: 15px;
+    margin-top: -4px;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+  }
+  .container-bar a:hover .title{
+    opacity: 1;
+    visibility: visible;
+    margin-left: 30px;
+    font-family: Poppins;
+  }
+  .container-bar .title:after{
+    position: absolute;
+    content: '';
+    border-left: 6px solid transparent;
+    border-right: 5px solid #1c1c1c;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    right: 100%;
+    top: 8px;
+  }

@@ -1,0 +1,79 @@
+<hr>
+<div>
+  <div  class="container centrar"> 
+    <h3>Menu Component</h3>
+    <br>
+    <div class="row">
+      <div class="col-lg-6 justify-content-center">
+        <a class="boton-personalizado-3" (click)="clicmostrardatosPeru()">Peru</a>
+      </div>
+      <div class="col-lg-6">
+        <a class="boton-personalizado-4"  (click)="clicmostrardatosPais()">Pais</a>
+      </div>     
+    </div>
+  </div>  
+  <br> 
+</div>
+<hr>
+<div> 
+  <div class="row">
+    <div class="col-lg-3">
+    <app-datos></app-datos>  
+    </div>
+    <div class="col col-lg-9">
+      <h3>Right Component</h3>
+      <h3>Post Component</h3>   
+      <div id="Layer1" class="scroll1">
+        <div class="row">
+          <div class="col-sm-2 verde" *ngFor="let us of usuario" >
+            <p><b>Tittle:</b> {{us.title}}</p>
+              <p><b>Body:</b>{{us.body}}</p>
+              <p><b>UserId:</b>{{us.userId}} <b>Id:</b>{{us.id}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div  *ngIf="mostrarperu">
+        <div *ngFor="let pe of peru" class="container">
+          <h4>Perú Component</h4>
+          <p><b>Nombre: </b>{{pe.name}}</p>        
+          <p><b>Capital: </b>{{pe.capital}}</p>
+          <p><b>Codigo de llamadas: </b>{{pe.callingCodes}}</p>          
+          <p><b>Continente: </b>{{pe.region}}</p>
+          <p><b>Territorio: </b>{{pe.area}} m2</p>
+          <p><b>Moneda: </b>{{pe.currencies[0].name}} </p>
+          <p><b>Idioma: </b>{{pe.languages[0].nativeName}} </p>
+        </div>
+      </div>
+        
+      <div *ngIf="mostrarpais">
+        <h4>Pais Component</h4>
+        <div class="scroll2">
+          <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Codigo 3 Dígitos</th>
+                <th scope="col">Polación</th>
+                <th scope="col">Continente</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let hero of pais;let indice=index">
+                <td>{{indice+1}}</td>
+                <th >{{hero.name}} </th>
+                <td >{{hero.alpha3Code}}</td>
+                <td>{{hero.population}}</td>
+                <td>{{hero.region}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>      
+       
+      </div>
+    </div>
+  </div>
+
+<hr>

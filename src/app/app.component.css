@@ -1,0 +1,16 @@
+.pad10{
+    padding-left: 6%;
+    padding-right: 6%;
+    background-color: lightgrey;
+}
+
+.blanco{
+    background-color: white;
+    padding: 2%;
+}
+
+.rojo{
+    background-color: #af2d2d;
+    color: white;
+    padding: 2%;
+}
